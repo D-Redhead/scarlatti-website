@@ -1,0 +1,5 @@
+assets/*.jpg
+assets/*.jpeg
+__pycache__/
+_site/
+.DS_Store
