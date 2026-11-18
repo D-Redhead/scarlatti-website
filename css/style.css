@@ -73,6 +73,8 @@ h4{font-size:1.05rem}
 .header{position:sticky;top:0;z-index:50;background:var(--wine);color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.08)}
 .header__bar{display:flex;align-items:center;gap:20px;height:var(--header-h)}
 .logo{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:#fff}
+.logo img{display:block;width:auto;height:44px}
+@media (min-width:980px){.logo img{height:50px}}
 .logo__name{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.85rem;letter-spacing:.01em}
 .logo__tag{font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;opacity:.85;margin-top:.3em}
 .status{display:none;align-items:center;gap:.55em;font-size:.78rem;letter-spacing:.08em;color:#fbe9ee}

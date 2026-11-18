@@ -9,7 +9,17 @@ while read -r name src; do
   [ -z "$name" ] && continue
   echo "→ assets/$name"
   curl -fsSL "$U/$src" -o "assets/$name"
-  if command -v sips >/dev/null; then sips -Z 1800 -s formatOptions 78 "assets/$name" >/dev/null
+  [[ "$name" == *.png ]] && continue
+  if python3 -c "import PIL" 2>/dev/null; then
+    python3 - "assets/$name" <<'PY'
+import sys
+from PIL import Image, ImageOps
+p = sys.argv[1]
+im = ImageOps.exif_transpose(Image.open(p)).convert("RGB")
+im.thumbnail((1600, 1600))
+im.save(p, "JPEG", quality=74, optimize=True, progressive=True)
+PY
+  elif command -v sips >/dev/null; then sips -Z 1800 -s formatOptions 78 "assets/$name" >/dev/null
   elif command -v magick >/dev/null; then magick "assets/$name" -resize '1800x1800>' -quality 78 -strip "assets/$name"
   elif command -v convert >/dev/null; then convert "assets/$name" -resize '1800x1800>' -quality 78 -strip "assets/$name"
   fi
@@ -26,5 +36,6 @@ terras.jpg           2025/04/MG_8360-1.jpg
 borrel.jpg           2025/04/MG_8845-e1746000609563.jpg
 wijn.jpg             2025/04/MG_8433-rotated-e1746001534530.jpg
 stad.jpg             2025/08/MG_9456.jpg
+logo-wit.png         2017/06/Scarlatti-Logo-Wit.png
 LIST
 echo "Klaar."

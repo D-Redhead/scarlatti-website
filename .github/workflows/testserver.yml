@@ -19,8 +19,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Foto's ophalen
-        run: bash fetch-assets.sh
+      - name: Foto's en logo ophalen en verkleinen
+        run: |
+          pip install --quiet pillow
+          bash fetch-assets.sh
+          ls -la assets
       - name: Site samenstellen (testversie, niet indexeren)
         run: |
           mkdir -p _site
