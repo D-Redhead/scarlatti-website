@@ -1,0 +1,4 @@
+# Netlify testsite: geen build-stap, bestanden worden gepubliceerd zoals ze zijn.
+[build]
+  publish = "."
+  command = ""

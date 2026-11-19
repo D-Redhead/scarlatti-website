@@ -1,0 +1,3 @@
+# Testsite op Netlify niet laten indexeren. Verwijderen bij livegang.
+/*
+  X-Robots-Tag: noindex, nofollow

@@ -1,5 +1,10 @@
+# werkbestanden (niet publiceren)
+_audit/
+_screens/
+_site/
+# originele, onbewerkte foto's; de site gebruikt assets/img/
 assets/*.jpg
 assets/*.jpeg
+assets/*.png
 __pycache__/
-_site/
 .DS_Store
