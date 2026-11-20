@@ -1,14 +1,14 @@
 # Nog aan te vullen of te controleren
 
-Stand van zaken: 19-11-2026, Nederlandse versie (14 pagina's). De Engelse versie volgt na akkoord.
+Stand van zaken: 20-11-2026. Nederlandse versie (14 pagina's in de root) en Engelse versie (14 pagina's in `en/`, letterlijke vertaling; menu-teksten volgen de Engelse helft van de PDF's).
 
 ## [AANVULLEN] – verplicht vóór livegang
 
 | # | Wat | Waar | Hoe |
 |---|---|---|---|
-| 1 | **Formspree-endpoint groepsaanvraag** | `groepen.html`, `action="https://formspree.io/f/AANVULLEN-groepsaanvraag"` (staat bij de HTML-commentaar `[AANVULLEN: Formspree-endpoint groepsaanvraag]`) | Maak een formulier aan op formspree.io en vervang de URL. Tot die tijd meldt het formulier netjes dat het nog niet gekoppeld is en verwijst het naar telefoon en mail. |
-| 2 | **Formspree-endpoint contact** | `contact.html`, `AANVULLEN-contact` | idem |
-| 3 | **Formspree-endpoint factuurgegevens** | `factuurgegevens.html`, `AANVULLEN-factuur` | idem |
+| 1 | **Formspree-endpoint groepsaanvraag** | `groepen.html` en `en/groups.html`, `action="https://formspree.io/f/AANVULLEN-groepsaanvraag"` (staat bij de HTML-commentaar `[AANVULLEN: Formspree-endpoint groepsaanvraag]`) | Maak een formulier aan op formspree.io en vervang de URL. Tot die tijd meldt het formulier netjes dat het nog niet gekoppeld is en verwijst het naar telefoon en mail. |
+| 2 | **Formspree-endpoint contact** | `contact.html` en `en/contact.html`, `AANVULLEN-contact` | idem |
+| 3 | **Formspree-endpoint factuurgegevens** | `factuurgegevens.html` en `en/invoice-details.html`, `AANVULLEN-factuur` | idem |
 
 ## Placeholders en ontbrekende assets
 
@@ -26,6 +26,8 @@ Er staan geen beeld-placeholders op de site: elke sectie heeft een eigen foto va
 **Testronde (GitHub + Netlify):** zet de inhoud van `redesign/` in de repo `D-Redhead/scarlatti-website` en koppel die aan Netlify. Laat de build command leeg en zet de publish directory op de map met `index.html`. Er is geen build-stap. Aandachtspunten tijdens de test:
 - **Staat live op https://scarlatti-testsite.netlify.app** (deploy van 19-11-2026). Alle pagina's geven HTTP 200. Er staat een `X-Robots-Tag: noindex` op, zodat Google de testsite niet indexeert naast de echte site. Dat staat in het `_headers`-bestand van de deploy, niet in `redesign/`.
 - De Guestplan-widget werkt op het Netlify-adres: de reserveerknop opent de echte widget. Op `*.github.io` is dat nog niet getest.
+- **Automatisch publiceren:** `redesign/` is een git-map die gekoppeld is aan `D-Redhead/scarlatti-website`. Bij elke push naar `main` publiceren Netlify en GitHub Pages (https://d-redhead.github.io/scarlatti-website/) allebei automatisch.
+- De GitHub Pages-workflow (`.github/workflows/testserver.yml`) is niet aangepast, omdat de GitHub-login de *workflow*-toestemming mist. Hij roept nog `fetch-assets.sh` aan, dat nu niets meer doet. Wil je de workflow opschonen, geef dan eerst toestemming met `gh auth refresh -h github.com -s workflow`.
 - Formspree werkt ook op Netlify. De formulieren melden "nog niet gekoppeld" tot de endpoints zijn ingevuld (punten 1–3).
 - Doorverwijzingen van de oude WordPress-adressen zijn op de testomgeving niet nodig. Die komen pas bij de overstap naar Plesk (punt 10).
 
@@ -47,3 +49,10 @@ Uploaden naar Plesk: zet de inhoud van `redesign/` in `httpdocs/` van scarlatti-
 - De **cookiebalk** is vervallen. De nieuwe site plaatst zelf geen tracking-cookies. Guestplan en Link Hospitality laden wel scripts van derden. [AANVULLEN: laat juridisch checken of daarvoor een cookiemelding nodig is.]
 - Het blok "Goed om te weten" stond vijf keer op de oude site. Het staat nu volledig op `groepen.html#goed-om-te-weten`. De subpagina's tonen alleen hun eigen afspraken en linken door.
 - De meta-tekst van de oude contactpagina noemde de "Stille Rijn". Dat is gecorrigeerd naar Stille Mare.
+
+## Engelse versie (ter info)
+
+- Elke pagina heeft een tegenhanger in `en/`, met een taalknop NL/EN in de header, het mobiele menu en de footer, plus `hreflang`-links voor zoekmachines.
+- De Engelse formulieren sturen naar dezelfde Formspree-endpoints. Het onderwerp van de mail eindigt op "(EN)" en de veldnamen zijn gelijk aan de Nederlandse.
+- De Uniforme Voorwaarden Horeca en de site van Dinerspel bestaan alleen in het Nederlands. Bij die links staat dat vermeld.
+- De Engelse vertaling is door mij gemaakt. [AANVULLEN: laat iemand met goed Engels de teksten nalezen, vooral de vacatures.]

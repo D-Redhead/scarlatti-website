@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice details | Restaurant Scarlatti Leiden</title>
+  <meta name="description" content="Pay for your booking at Restaurant Scarlatti by invoice: leave your invoice details. We charge € 15 administration costs.">
+  <meta name="theme-color" content="#7A0E2A">
+  <link rel="canonical" href="https://www.scarlatti-leiden.nl/en/invoice-details.html">
+  <link rel="alternate" hreflang="nl" href="https://www.scarlatti-leiden.nl/factuurgegevens.html">
+  <link rel="alternate" hreflang="en" href="https://www.scarlatti-leiden.nl/en/invoice-details.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.scarlatti-leiden.nl/factuurgegevens.html">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preload" href="../assets/fonts/YoungSerif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Figtree-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../assets/img/logo-wit.png" alt="Restaurant Scarlatti – Lunch &amp; Diner, to the homepage" width="300" height="162"></a>
+      <nav class="nav" aria-label="Main menu">
+        <ul>
+          <li><a href="food-and-drinks.html">Food &amp; drinks</a></li>
+          <li><a href="high-tea-and-high-wine.html">High tea &amp; wine</a></li>
+          <li><a href="groups.html" aria-current="page">Groups</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="lang-switch" href="../factuurgegevens.html" hreflang="nl" lang="nl" aria-label="Lees deze pagina in het Nederlands">NL</a>
+        <a class="btn btn-light" href="contact.html#reserveren" data-reserve>Book</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+          <span class="menu-label">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food-and-drinks.html">Food &amp; drinks</a></li>
+          <li><a href="high-tea-and-high-wine.html">High tea &amp; high wine</a></li>
+          <li><a href="groups.html" aria-current="page">Groups &amp; Heerenkamer</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="menu-meta">Stille Mare 4, Leiden · <a href="tel:+31715122114">+31 71 512 21 14</a> · <a href="../factuurgegevens.html" hreflang="nl" lang="nl">Nederlands</a></p>
+  </div>
+
+  <main id="main">
+    <section class="hero hero--page" aria-labelledby="page-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="groups.html">Groups</a></nav>
+          <h1 id="page-title">Pay by invoice</h1>
+          <div class="lead"><p>Would you rather pay for your booking by invoice? No problem! Fill in your details below and we will make sure the invoice lands in your mailbox afterwards. We charge € 15 administration costs for preparing an invoice.</p></div>
+          
+          
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/img/bar-800.jpg" srcset="../assets/img/bar-800.jpg 800w, ../assets/img/bar-1600.jpg 1600w" sizes="(min-width: 900px) 55vw, 100vw" alt="The Scarlatti bar" width="800" height="483" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="inv-t">
+      <div class="wrap narrow">
+        <h2 id="inv-t" class="sr-only">Invoice details</h2>
+        <!-- [AANVULLEN: Formspree-endpoint factuurgegevens] replace the action below (same endpoint as the Dutch form) -->
+        <form class="form" action="https://formspree.io/f/AANVULLEN-factuur" method="POST" data-formspree novalidate>
+          <input type="hidden" name="_subject" value="Invoice details via scarlatti-leiden.nl (EN)">
+          <fieldset>
+            <legend><span class="step">1</span> Your booking</legend>
+            <div class="field">
+                <label for="f-date">Booking date <span class="req">*</span></label>
+                <input id="f-date" name="datum_reservering" type="date" required aria-describedby="f-date-err">
+                <p class="field-error" id="f-date-err" hidden></p>
+              </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="step">2</span> Which name should be on the invoice?</legend>
+            <div class="field">
+                <label for="f-comp">Company name</label>
+                <input id="f-comp" name="bedrijfsnaam" type="text" autocomplete="organization" aria-describedby="f-comp-err">
+                <p class="field-error" id="f-comp-err" hidden></p>
+              </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-fn">First name <span class="req">*</span></label>
+                <input id="f-fn" name="voornaam" type="text" autocomplete="given-name" required aria-describedby="f-fn-err">
+                <p class="field-error" id="f-fn-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-ln">Last name <span class="req">*</span></label>
+                <input id="f-ln" name="achternaam" type="text" autocomplete="family-name" required aria-describedby="f-ln-err">
+                <p class="field-error" id="f-ln-err" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+                <label for="f-mail">To which email address should the invoice be sent? <span class="req">*</span></label>
+                <input id="f-mail" name="factuur_email" type="email" autocomplete="email" required aria-describedby="f-mail-err">
+                <p class="field-error" id="f-mail-err" hidden></p>
+              </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="step">3</span> Address</legend>
+            <div class="field">
+                <label for="f-street">Street + house number <span class="req">*</span></label>
+                <input id="f-street" name="straat_huisnummer" type="text" autocomplete="street-address" required aria-describedby="f-street-err">
+                <p class="field-error" id="f-street-err" hidden></p>
+              </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-zip">Postcode <span class="req">*</span></label>
+                <input id="f-zip" name="postcode" type="text" autocomplete="postal-code" required aria-describedby="f-zip-err">
+                <p class="field-error" id="f-zip-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-city">City <span class="req">*</span></label>
+                <input id="f-city" name="stad" type="text" autocomplete="address-level2" required aria-describedby="f-city-err">
+                <p class="field-error" id="f-city-err" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+                <label for="f-country">Country <span class="req">*</span></label>
+                <input id="f-country" name="land" type="text" autocomplete="country-name" required aria-describedby="f-country-err" value="Netherlands">
+                <p class="field-error" id="f-country-err" hidden></p>
+              </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="step">4</span> Reference on the invoice</legend>
+            <p class="field-hint">Many organisations need one of these numbers to process the invoice. Does your organisation not use them? Then you can fill in “n/a”.</p>
+            <div class="field-row field-row--3">
+              <div class="field">
+                <label for="f-kp">Cost centre number <span class="req">*</span></label>
+                <input id="f-kp" name="kostenplaatsnummer" type="text" required aria-describedby="f-kp-err">
+                <p class="field-error" id="f-kp-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-bas">BAS number (AFAS) <span class="req">*</span></label>
+                <input id="f-bas" name="bas_nummer" type="text" required aria-describedby="f-bas-err">
+                <p class="field-error" id="f-bas-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-sap">SAP number <span class="req">*</span></label>
+                <input id="f-sap" name="sap_nummer" type="text" required aria-describedby="f-sap-err">
+                <p class="field-error" id="f-sap-err" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="step">5</span> Contact person</legend>
+            <p class="field-hint">Fill in the details of the person who can be reached for questions about the invoice and booking.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-cfn">First name <span class="req">*</span></label>
+                <input id="f-cfn" name="contact_voornaam" type="text" autocomplete="given-name" required aria-describedby="f-cfn-err">
+                <p class="field-error" id="f-cfn-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-cln">Last name <span class="req">*</span></label>
+                <input id="f-cln" name="contact_achternaam" type="text" autocomplete="family-name" required aria-describedby="f-cln-err">
+                <p class="field-error" id="f-cln-err" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+                <label for="f-ctel">Phone number <span class="req">*</span></label>
+                <input id="f-ctel" name="contact_telefoon" type="tel" autocomplete="tel" required aria-describedby="f-ctel-err">
+                <p class="field-error" id="f-ctel-err" hidden></p>
+              </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-cmail">Email address <span class="req">*</span></label>
+                <input id="f-cmail" name="contact_email" type="email" autocomplete="email" required aria-describedby="f-cmail-err">
+                <p class="field-error" id="f-cmail-err" hidden></p>
+              </div>
+              <div class="field">
+                <label for="f-cmail2">Confirm email address <span class="req">*</span></label>
+                <input id="f-cmail2" name="contact_email_bevestigen" type="email" autocomplete="email" required aria-describedby="f-cmail2-err" data-match="f-cmail">
+                <p class="field-error" id="f-cmail2-err" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+                <label for="f-note">Any comments?</label>
+                <textarea id="f-note" name="opmerkingen" rows="5" aria-describedby="f-note-err"></textarea>
+                <p class="field-error" id="f-note-err" hidden></p>
+              </div>
+          </fieldset>
+          <div class="field field-check">
+            <input id="f-ok" name="akkoord_administratiekosten" type="checkbox" value="ja" required aria-describedby="f-ok-err">
+            <label for="f-ok">I agree to € 15 administration costs for preparing the invoice. <span class="req">*</span></label>
+            <p class="field-error" id="f-ok-err" hidden></p>
+          </div>
+          <p class="form-note"><span class="req">*</span> required field</p>
+          <button class="btn btn-wine" type="submit">Send invoice details</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img src="../assets/img/logo-wit.png" alt="Restaurant Scarlatti – Lunch &amp; Diner" width="300" height="162" loading="lazy">
+          <address>Stille Mare 4<br>2312 DH Leiden<br><a href="tel:+31715122114">+31 71 512 21 14</a><br><a href="mailto:info@scarlatti-leiden.nl">info@scarlatti-leiden.nl</a></address>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Scarlatti</h2>
+          <ul>
+            <li><a href="food-and-drinks.html">Food &amp; drinks</a></li>
+          <li><a href="high-tea-and-high-wine.html">High tea &amp; high wine</a></li>
+          <li><a href="groups.html">Groups &amp; Heerenkamer</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Also useful</h2>
+          <ul>
+            <li><a href="https://www.boutiquehoteldeoudemorsch.nl/vergaderruimte/">Meetings at Boutique Hotel d’Oude Morsch</a></li>
+            <li><a href="invoice-details.html">Pay by invoice</a></li>
+            <li><a href="https://www.instagram.com/restaurantscarlatti/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/ScarlattiLeiden">Facebook</a></li>
+            <li><a href="../factuurgegevens.html" hreflang="nl" lang="nl">Nederlands</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Restaurant Scarlatti, Leiden</span>
+        <span>All our agreements are subject to the <a href="https://assets.khn.nl/uploads/downloads/uniforme-voorwaarden-horeca-nederlands-v3.pdf" hreflang="nl">Uniform Conditions for the Hospitality Industry (UVH, in Dutch)</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a class="btn btn-light" href="contact.html#reserveren" data-reserve>Book a table</a>
+    <a class="btn btn-call" href="tel:+31715122114" aria-label="Call Scarlatti: +31 71 512 21 14">Call</a>
+  </div>
+
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

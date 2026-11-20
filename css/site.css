@@ -362,3 +362,8 @@ body { padding-bottom: 4.5rem; }
   .options a { grid-template-columns: 1fr; }
   .options .price { grid-row: auto; grid-column: 1; text-align: left; }
 }
+
+/* taalwissel */
+.lang-switch { display: inline-flex; align-items: center; justify-content: center; min-width: 2.75rem; min-height: 2.75rem; font-weight: 600; font-size: .9375rem; text-decoration: none; letter-spacing: .02em; border-radius: 2px; transition: background-color .2s; }
+.lang-switch:hover { background: var(--wine-deep); }
+:lang(en) .or-list li + li::before { content: "or"; }
